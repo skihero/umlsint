@@ -8,9 +8,8 @@ func _ready():
 	result_label = $Label
 	
 	var button = Button.new()
-	button.text = "Click me"
-	button.rect_min_size = Vector2(100, 50)  # Set button siz
-	button.connect("pressed", self, "_on_button_pressed")
+	button.text = "Connect and Search UTS"
+ 	button.pressed.connect(self._get_api_data)
 
 	# Add the button to the scene
 	add_child(button)
